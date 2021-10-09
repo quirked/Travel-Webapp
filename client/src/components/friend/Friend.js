@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import PersonAddIcon from '@material-ui/icons/PersonAdd'
 import Block from '@material-ui/icons/Block'
-// import GroupsIcon from '@material-ui/icons/Groups'
 
 const Friend = ({user}) => {
     return (
@@ -16,9 +15,6 @@ const Friend = ({user}) => {
                 <Icon>
                     <Block/>
                 </Icon>
-                {/* <Icon>
-                    <GroupsIcon/>
-                </Icon> */}
             </Info>
         </Container>
     )
@@ -38,6 +34,7 @@ const Info = styled.div`
   justify-content: center;
   transition: all 0.5s ease;
   cursor: pointer;
+  border-radius: 10px;
 `;
 
 const Container = styled.div`
@@ -49,6 +46,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #f5fbfd;
+  border-radius: 10px;
   position: relative;
   &:hover ${Info}{
     opacity: 1;

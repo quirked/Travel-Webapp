@@ -5,11 +5,11 @@ export const users = [
     },
     {
         id: 2,
-        img: "",
+        img: "https://avatars.dicebear.com/api/micah/wqfaeeq.svg",
     },
     {
         id: 3,
-        img: "",
+        img: "https://avatars.dicebear.com/api/micah/wqfaeeqrw.svg",
     },
     {
         id: 4,
