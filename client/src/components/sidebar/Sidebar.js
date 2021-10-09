@@ -46,7 +46,6 @@ const Sidebar = () => {
 }
 
 const Container = styled.div`
-border: 1px solid black;
 flex: 1;
 height: calc(100vh - 50px);
 background-color: yellow;
