@@ -11,8 +11,7 @@ import PersonIcon from '@material-ui/icons/Person'
 const Sidebar = () => {
     return (
         <Container>
-            <Wrapper>
-                <SideMenu>
+            <SideMenu>
                     <SidebarTitle>
                         <HomeRoundedIcon/>
                         Home
@@ -42,39 +41,35 @@ const Sidebar = () => {
                         Profile
                     </SidebarTitle>
                 </SideMenu>
-            </Wrapper>
         </Container>
     )
 }
 
 const Container = styled.div`
+border: 1px solid black;
 flex: 1;
-height: calc(100vh-60px);
-background-color: #ffcccb;
+height: calc(100vh - 50px);
+background-color: yellow;
 position: sticky;
-top: 60px;
-`;
-
-const Wrapper = styled.div`
-padding: 20px;
-color: #000;
+top: 50px;
 `;
 
 const SideMenu = styled.div`
-margin-bottom: 10px;
+padding: 20px;
+color: black;
 `;
 
 const SidebarTitle = styled.div`
-border: 1px solid black;
-font-size: 13px;
-padding: 5px;
+font-size: 17px;
+font-weight: bold;
+padding: 10px;
 cursor: pointer;
-display: flex:
-justify-content: center;
+display: flex;
 align-items: center;
 border-radius: 10px;
+margin-bottom: 10px;
 &:hover {
-    baclground-color: #000;
+    background-color: #fff;
 }
 `;
 

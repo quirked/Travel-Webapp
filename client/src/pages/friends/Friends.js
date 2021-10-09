@@ -1,16 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import Navbar from '../../components/navbar/Navbar'
 
-const Home = () => {
+const Friends = () => {
     return (
         <Container>
-            <Navbar/>
+            Hello
         </Container>
     )
 }
 
 const Container = styled.div`
+flex: 4;
+background-color: pink;
+padding: 20px;
 `;
 
-export default Home
+export default Friends

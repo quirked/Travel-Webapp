@@ -1,26 +1,32 @@
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./pages/home/Home";
 import styled from 'styled-components'
+import Navbar from "./components/navbar/Navbar";
+import Friends from "./pages/friends/Friends";
 
 function App() {
   return (
-    <div>
-      <Home/>
+    <Router>
+      <Navbar/>
       <Container>
         <Sidebar/>
-        <Others>other stuff</Others>
+        <Switch>
+          <Route exact path='/'></Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/friends">
+            <Friends />
+          </Route>
+        </Switch>
       </Container>
-    </div>
+    </Router>
   );
 }
 
 const Container = styled.div`
 display: flex;
-`;
-
-const Others = styled.div`
-flex: 4;
-background-color: pink;
 `;
 
 export default App;
