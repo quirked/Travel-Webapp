@@ -1,89 +1,60 @@
-import { Badge } from "@material-ui/core";
-import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNone'
-import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined'
-import SettingsIcon from '@material-ui/icons/Settings'
-import React from "react";
-import styled from "styled-components";
-import {mobile} from '../../responsive'
+import React from 'react'
+import styled from 'styled-components'
 
 const Navbar = () => {
   return (
     <Container>
-      <Wrapper>
-        <Left>
-          <Logo>OUR APP</Logo>
-        </Left>
-        <Center>
-          <Links>REACT.</Links>
-        </Center>
-        <Right>
-          <MenuItem>
-            <Badge badgeContent={4} color="secondary">
-              <ChatOutlinedIcon />
-            </Badge>
-          </MenuItem>
-          <MenuItem>
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsNoneOutlinedIcon />
-            </Badge>
-          </MenuItem>
-          <MenuItem>
-            <Badge>
-              <SettingsIcon />
-            </Badge>
-          </MenuItem>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
-        </Right>
-      </Wrapper>
+      <NavbarWrapper>
+        <NavLeft>
+          <Logo>Travel Site</Logo>
+        </NavLeft>
+        <NavRight>
+          <Avatar>
+            <img src="https://avatars.dicebear.com/api/micah/nishankfe.svg" alt=""/>
+          </Avatar>
+        </NavRight>
+      </NavbarWrapper>
     </Container>
-  );
-};
+  )
+}
 
 const Container = styled.div`
-  height: 60px;
-  background-color: white;
-  color: black;
+width: 100%;
+height: 50px;
+background-color: #fff;
+position: sticky;
+top: 0;
+z-index: 999;
 `;
 
-const Wrapper = styled.div`
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+const NavbarWrapper = styled.div`
+height: 100%;
+padding: 0 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
 `;
 
-const Left = styled.div`
-  flex: 1;
-  display: flex;
-  align-items: center;
+const NavLeft = styled.div`
 `;
 
-const Logo = styled.span`
-  font-size: 14px;
-  cursor: pointer;
+const Logo = styled.div`
+font-weight: bold;
+font-size: 30px;
+color: #000;
+cursor: pointer;
 `;
 
-const Center = styled.div`
-  flex: 1;
-  text-align: center;
+const NavRight = styled.div`
+position: relative;
 `;
 
-const Links = styled.h1`
-  font-weight: bold;
+const Avatar  = styled.div`
+width: 45px;
+height: 45px;
+border-radius: 50%;
+cursor: pointer;
 `;
 
-const Right = styled.div`
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-`;
-
-const MenuItem = styled.div`
-  font-size: 14px;
-  cursor: pointer;
-  margin-left: 25px;
-`;
 
 export default Navbar
